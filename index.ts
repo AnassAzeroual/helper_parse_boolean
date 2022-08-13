@@ -1,9 +1,5 @@
-// Import stylesheets
-import './style.css';
-
 // Write TypeScript code!
 const appDiv: HTMLElement = document.getElementById('app');
-let output = '';
 let list = [
   'true',
   true,
@@ -31,12 +27,19 @@ let list = [
   undefined,
 ];
 
+/* -------------------------------------------------------------------------- */
+/*                              The Main Function                             */
+/* -------------------------------------------------------------------------- */
 function parserboolean(ipt: string | boolean): boolean | undefined {
   if (['true', 'false'].includes(String(ipt).toLowerCase())) {
     return JSON.parse(String(ipt).toLowerCase());
   }
 }
-function loopi() {
+
+/* -------------------------------------------------------------------------- */
+/*                   Just helper iterate through list array                   */
+/* -------------------------------------------------------------------------- */
+function loopy() {
   console.clear();
   for (let i = 0; i < list.length; i++) {
     var tag = document.createElement('h1');
@@ -50,5 +53,4 @@ function loopi() {
     appDiv.appendChild(tag);
   }
 }
-
-loopi();
+loopy();
