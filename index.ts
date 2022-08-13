@@ -52,6 +52,3 @@ function loopi() {
 }
 
 loopi();
-// output = parserboolean('False');
-
-// appDiv.innerHTML = `<h1>${output}</h1>`;
